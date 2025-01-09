@@ -1,0 +1,25 @@
+//centering items with flexbox
+@use "variables" as var;
+
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    flex-direction: column;
+  }
+
+@mixin heading{
+letter-spacing: 0px;
+line-height: 31px;
+font-family: "Citi Sans Book";
+font-weight: 100;
+color: var.$color;
+}
+
+@mixin ptext{
+    letter-spacing: 0px;
+line-height: 31px;
+color: #888888;
+font-family: "Citi Sans Book";
+}

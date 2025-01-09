@@ -1,0 +1,354 @@
+@use "variables" as var;
+@use "mixin";
+
+// style for header
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  height: 100px;
+}
+
+// logo
+header img {
+  width: 100%;
+}
+
+// main image
+.image-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 520px;
+}
+
+.image {
+  width: 100%;
+  height: 1000px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(288deg, rgba(0, 89, 68, 0.8) 40%, transparent 40%);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    height: 228px;
+  }
+  .image {
+    width: 100%;
+    height: 495px;
+    object-fit: cover;
+    object-position: 30% -40px;
+  }
+  .image-container::after {
+    background: none; // remove gradient
+  }
+}
+
+//headings
+h2 {
+  @include mixin.heading;
+  height: auto;
+  font-size: var.$Heading-fontsize;
+  text-align: center;
+}
+
+// undeline for header
+hr {
+  border: none;
+  margin: 10px auto;
+  width: 73px;
+  height: 2px;
+  background-color: var.$color;
+  text-align: center;
+}
+
+// normal paragraph
+p {
+  @include mixin.ptext;
+  height: auto;
+  font-size: 19px;
+  text-align: left;
+}
+
+//*****************************INVESTMENT*******************************
+.Investment {
+  @include mixin.flex-center;
+  padding: 25px;
+  margin-top: 25px;
+
+  // career button
+  .Btn {
+    width: 165px;
+    height: 40px;
+    margin: 28px auto 3px auto;
+    border: none;
+    cursor: pointer;
+    background-color: #e97300;
+    font-size: 24px;
+    line-height: 32px;
+    color: #ffffff;
+    font-family: "Citi Sans Book";
+  }
+}
+
+//**********************CITIZEN DIV************************************
+
+.Citizen {
+  @include mixin.flex-center;
+  padding: 25px;
+
+  .cards {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    // padding: 25px;
+    align-items: center;
+  }
+
+  .cards div {
+    padding: 10px;
+  }
+
+  //verticle line between div
+  .cards div:nth-child(1),
+  .cards div:nth-child(3) {
+    border-right: 0.4px solid #666666;
+  }
+
+  .cards div:nth-child(3),
+  .cards div:nth-child(4) {
+    margin-top: 50px;
+  }
+
+  // citizen card sub headings
+  .cards div h6 {
+    margin: 0;
+    font-size: 24px;
+    @include mixin.heading;
+  }
+  // citizen card paragraph
+  .cards .topDivs p {
+    @include mixin.ptext;
+    font-size: 18px;
+
+    a {
+      color: #759b24 !important;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #97B846  !important;
+    }
+  }
+
+  .cards .bottomDivs p {
+    @include mixin.ptext;
+    font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    .cards {
+      grid-template-columns: 1fr; /* small screens */
+    }
+
+    // verticle line
+    .cards div:nth-child(1) {
+      border-right: none;
+      border-bottom: 0.4px solid #666666;
+      padding-bottom: 32px;
+    }
+    .cards div:nth-child(3) {
+      border-right: none;
+      border-top: 0.4px solid #666666;
+      padding-top: 32px;
+    }
+
+    .cards div:nth-child(3),
+    .cards div:nth-child(4) {
+      margin-top: unset;
+    }
+  }
+}
+
+//**********************************BANK CARD**********************************
+.Bank-card {
+  @include mixin.flex-center;
+  padding: 25px;
+
+  .Bank-card-title {
+    min-height: 57px;
+    height: auto;
+    background-color: #00945f;
+    padding: 10px;
+
+    p {
+      @include mixin.ptext;
+      color: #ffffff !important;
+      text-align: center;
+    }
+  }
+
+  .bank-card-body {
+    height: auto;
+    min-height: 171px;
+    background-color: #ebf7f5;
+    padding: 25px;
+
+    p {
+      @include mixin.ptext;
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}
+
+//**************************LIST  OF OFFICER************************************
+.OfficerCard {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px;
+  grid-gap: 20px;
+
+  .officer {
+    flex: 1 1 calc(33.33% - 20px); /* 3 cards per row */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  .officer img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+  }
+  .officer .officer-image2 {
+    width: 241px !important;
+    height: 188px !important;
+    object-fit: cover;
+  }
+
+  .officer-card-body {
+    @include mixin.flex-center;
+    padding: 20px;
+    position: relative;
+    align-items: center;
+
+    p {
+      height: auto;
+      min-width: 100px;
+      width: auto;
+      font-size: 18px;
+      letter-spacing: 0px;
+      line-height: 29px;
+      color: #666666;
+      font-style: italic;
+      font-family: "Citi Sans Book Italic";
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: wrap;
+    }
+
+    .watermark {
+      position: absolute;
+      top: -58px;
+      left: -4%;
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+      opacity: 0.11;
+      font-size: 186px;
+      letter-spacing: -2px;
+      color: #666666;
+      font-style: italic;
+      font-family: "Citi Sans Book Italic";
+    }
+
+    .regards {
+      opacity: 0.839;
+      color: #009e77;
+      font-family: "Citi Sans Book" !important;
+      text-align: center;
+      font-size: 18px;
+      letter-spacing: 0px;
+      line-height: 29px;
+      text-align: center;
+      overflow: hidden;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .OfficerCard {
+    flex-direction: column;
+  }
+}
+
+//*********************** footer hr*******************************
+.footerLine {
+  width: 100%;
+  height: 1.5px;
+  background-color: #00945f;
+  //border: 0.1px solid #00945f;
+}
+
+//************************FOOTER CONTAINER**************************************
+.FooterContainer {
+  @include mixin.flex-center;
+  grid-gap: 20px;
+  padding: 25px;
+
+  .Footer-paragraph p {
+    font-size: 11px;
+    color: #666666;
+    font-family: "Arial";
+    line-height: unset !important;
+
+    a {
+      text-underline-offset: 3px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      color: #666666;
+    }
+  }
+
+  .Footer-text p {
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
+    font-family: "Citi Sans Book";
+  }
+
+  @media (max-width: 768px) {
+    .SocialMedia img {
+      width: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
