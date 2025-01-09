@@ -330,9 +330,6 @@ p {
   transition: color 0.3s ease;
   color: #666666;
 }
-.FooterContainer .Footer-paragraph p a:hover {
-  color: #666666;
-}
 .FooterContainer .Footer-text p {
   font-size: 12px;
   line-height: 16px;
