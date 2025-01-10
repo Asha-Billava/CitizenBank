@@ -226,12 +226,18 @@ p {
     height: auto;
     min-height: 171px;
     background-color: #ebf7f5;
-    padding: 10px;
+    padding: 35px;
 
     p {
       @include mixin.ptext;
       font-size: 1.125rem;
       text-align: left;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .bank-card-body {
+      padding: 10px;
     }
   }
 }
@@ -258,7 +264,7 @@ p {
     flex: 0 0 16%;
   }
   .officer2 {
-    flex: 0 0 25%;
+    flex: 0 0 24%;
   }
 
   .officer img {

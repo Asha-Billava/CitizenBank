@@ -229,7 +229,7 @@ p {
   height: auto;
   min-height: 171px;
   background-color: #ebf7f5;
-  padding: 10px;
+  padding: 35px;
 }
 .Bank-card .bank-card-body p {
   letter-spacing: 0px;
@@ -238,6 +238,11 @@ p {
   font-family: "Citi Sans Book";
   font-size: 1.125rem;
   text-align: left;
+}
+@media (max-width: 768px) {
+  .Bank-card .bank-card-body {
+    padding: 10px;
+  }
 }
 
 .OfficerCard {
@@ -258,7 +263,7 @@ p {
   flex: 0 0 16%;
 }
 .OfficerCard .officer2 {
-  flex: 0 0 20%;
+  flex: 0 0 24%;
 }
 .OfficerCard .officer img {
   width: 180px;
