@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 body {
@@ -21,17 +22,28 @@ header {
   padding: 25px;
   height: 100px;
 }
-
 header img {
-  width: 100%;
+  width: 90%;
 }
 
+@media (max-width: 768px) {
+  header {
+    height: 75px;
+    justify-content: center;
+  }
+  header div {
+    text-align: center;
+  }
+  header div img {
+    width: 70%;
+  }
+}
 .image-container {
   width: 100%;
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 520px;
+  height: 500px;
 }
 
 .image {
@@ -73,7 +85,7 @@ h2 {
   font-weight: 100;
   color: #00945f;
   height: auto;
-  font-size: 30px;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -92,7 +104,7 @@ p {
   color: #888888;
   font-family: "Citi Sans Book";
   height: auto;
-  font-size: 19px;
+  font-size: 1.125rem;
   text-align: left;
 }
 
@@ -110,7 +122,7 @@ p {
   border: none;
   cursor: pointer;
   background-color: #e97300;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 32px;
   color: #ffffff;
   font-family: "Citi Sans Book";
@@ -127,7 +139,6 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
-  align-items: center;
 }
 .Citizen .cards div {
   padding: 10px;
@@ -142,7 +153,7 @@ p {
 }
 .Citizen .cards div h6 {
   margin: 0;
-  font-size: 24px;
+  font-size: 1.5rem;
   letter-spacing: 0px;
   line-height: 31px;
   font-family: "Citi Sans Book";
@@ -154,7 +165,7 @@ p {
   line-height: 31px;
   color: #888888;
   font-family: "Citi Sans Book";
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .Citizen .cards .topDivs p a {
   color: #759b24 !important;
@@ -163,14 +174,14 @@ p {
   transition: color 0.3s ease;
 }
 .Citizen .cards .topDivs p a:hover {
-  color: #97B846 !important;
+  color: #97b846 !important;
 }
 .Citizen .cards .bottomDivs p {
   letter-spacing: 0px;
   line-height: 31px;
   color: #888888;
   font-family: "Citi Sans Book";
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 @media (max-width: 768px) {
   .Citizen .cards {
@@ -181,7 +192,8 @@ p {
     border-bottom: 0.4px solid #666666;
     padding-bottom: 32px;
   }
-  .Citizen .cards div:nth-child(3) {
+  .Citizen .cards div:nth-child(3),
+  .Citizen .cards div:nth-child(4) {
     border-right: none;
     border-top: 0.4px solid #666666;
     padding-top: 32px;
@@ -211,35 +223,42 @@ p {
   font-family: "Citi Sans Book";
   color: #ffffff !important;
   text-align: center;
+  font-size: 1.5rem !important;
 }
 .Bank-card .bank-card-body {
   height: auto;
   min-height: 171px;
   background-color: #ebf7f5;
-  padding: 25px;
+  padding: 10px;
 }
 .Bank-card .bank-card-body p {
   letter-spacing: 0px;
   line-height: 31px;
   color: #888888;
   font-family: "Citi Sans Book";
-  font-size: 18px;
-  text-align: center;
+  font-size: 1.125rem;
+  text-align: left;
 }
 
 .OfficerCard {
   display: flex;
-  flex-wrap: wrap;
   padding: 25px;
   grid-gap: 20px;
+  justify-content: space-between;
 }
 .OfficerCard .officer {
-  flex: 1 1 calc(33.33% - 20px); /* 3 cards per row */
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
   padding: 10px;
+}
+.OfficerCard .officer1,
+.OfficerCard .officer3 {
+  flex: 0 0 16%;
+}
+.OfficerCard .officer2 {
+  flex: 0 0 20%;
 }
 .OfficerCard .officer img {
   width: 180px;
@@ -260,10 +279,10 @@ p {
   align-items: center;
 }
 .OfficerCard .officer-card-body p {
-  height: auto;
+  min-height: 150px;
   min-width: 100px;
   width: auto;
-  font-size: 18px;
+  font-size: 1.125rem;
   letter-spacing: 0px;
   line-height: 29px;
   color: #666666;
@@ -282,7 +301,7 @@ p {
   user-select: none;
   white-space: nowrap;
   opacity: 0.11;
-  font-size: 186px;
+  font-size: 11.625rem;
   letter-spacing: -2px;
   color: #666666;
   font-style: italic;
@@ -293,16 +312,37 @@ p {
   color: #009e77;
   font-family: "Citi Sans Book" !important;
   text-align: center;
-  font-size: 18px;
+  font-size: 0.875rem;
   letter-spacing: 0px;
   line-height: 29px;
   text-align: center;
   overflow: hidden;
 }
 
+@media (max-width: 1020px) {
+  .OfficerCard {
+    flex-direction: column;
+  }
+}
 @media (max-width: 768px) {
   .OfficerCard {
     flex-direction: column;
+  }
+  .OfficerCard .officer img {
+    width: 140px;
+    height: 129px;
+  }
+  .OfficerCard .officer .officer-image2 {
+    width: 174px !important;
+    height: 138px !important;
+  }
+  .OfficerCard .officer-card-body {
+    width: 250px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .OfficerCard .officer-card-body {
+    width: 300px;
   }
 }
 .footerLine {
@@ -318,28 +358,27 @@ p {
   grid-gap: 20px;
   padding: 25px;
 }
+.FooterContainer .SocialMedia img {
+  width: 30px;
+}
 .FooterContainer .Footer-paragraph p {
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: #666666;
   font-family: "Arial";
   line-height: unset !important;
 }
 .FooterContainer .Footer-paragraph p a {
   text-underline-offset: 3px;
+  font-size: 0.6875rem;
   cursor: pointer;
   transition: color 0.3s ease;
   color: #666666;
 }
 .FooterContainer .Footer-text p {
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 16px;
   color: #000000;
   font-family: "Citi Sans Book";
-}
-@media (max-width: 768px) {
-  .FooterContainer .SocialMedia img {
-    width: 30px;
-  }
 }
 
 @media (max-width: 768px) {
