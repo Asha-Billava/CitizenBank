@@ -141,7 +141,7 @@ p {
   color: #888888;
   font-family: "Citi Sans Book";
   height: auto;
-  font-size: 19px;
+  font-size: 1.125rem;
   text-align: left;
 }
 
@@ -202,14 +202,14 @@ p {
   line-height: 31px;
   color: #888888;
   font-family: "Citi Sans Book";
-  font-size: 19px;
+  font-size: 1.125rem;
 }
 .Citizen .cards .topDivs p a {
   color: #759b24 !important;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease;
-  font-size: 19px;
+  font-size: 1.125rem;
 }
 .Citizen .cards .topDivs p a:hover {
   color: #97b846 !important;
@@ -219,7 +219,7 @@ p {
   line-height: 31px;
   color: #888888;
   font-family: "Citi Sans Book";
-  font-size: 19px;
+  font-size: 1.125rem;
 }
 @media (max-width: 768px) {
   .Citizen .cards {
@@ -275,7 +275,7 @@ p {
   line-height: 31px;
   color: #888888;
   font-family: "Citi Sans Book";
-  font-size: 19px;
+  font-size: 1.125rem;
   text-align: left;
 }
 @media (max-width: 768px) {
@@ -354,7 +354,7 @@ p {
   color: #009e77;
   font-family: "Citi Sans Book" !important;
   text-align: center;
-  font-size: 19px;
+  font-size: 1.125rem;
   letter-spacing: 0px;
   line-height: 29px;
   text-align: center;
