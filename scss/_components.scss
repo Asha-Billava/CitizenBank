@@ -308,7 +308,6 @@ p {
 }
 
 //**************************LIST  OF OFFICER************************************
-
 .OfficerCard {
   display: flex;
   gap: 1rem;
@@ -405,13 +404,15 @@ p {
       padding: 0 20px 20px 20px;
   }
 }
-  
+
   
 }
 @media (max-width: 768px) {
   .OfficerCard {
     flex-direction: column;
     gap: 0rem;
+    padding: 20px 67px;
+
 
 
     // .Officer img {
