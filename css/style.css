@@ -384,7 +384,6 @@ p {
   .OfficerCard {
     flex-direction: column;
     gap: 0rem;
-    padding: 0px 25px 25px 25px;
   }
   .OfficerCard .officer-card-body .paragraph2 {
     max-width: 228px;
