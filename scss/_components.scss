@@ -1,6 +1,15 @@
 @use "variables" as var;
 @use "mixin";
 
+@font-face {
+  font-family: 'Citi Sans Book';
+  src: url('../assets/texts/Citizen\ Book.ttf')
+  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 // style for header
 header {
   display: flex;
@@ -59,14 +68,22 @@ header {
   );
   pointer-events: none;
 }
-@media (min-width: 1900px) {
+@media (min-width: 1865px) {
   .image-container {
     height: 570px;
   }
   .image {
-    width: 1570px;
+    height: 1570px;
   }
 }
+
+@media (min-width: 1920px) {
+  
+  .image {
+    height: 1590px;
+  }
+}
+
 
 @media (min-width: 1195px) and (max-width: 1500px) {
   .image-container {
@@ -126,7 +143,7 @@ hr {
 p {
   @include mixin.ptext;
   height: auto;
-  font-size: 1.0625rem;
+  font-size: var.$Paragraph-font;
   text-align: left;
 }
 
@@ -138,8 +155,8 @@ p {
 
   // career button
   .Btn {
-    width: 165px;
-    height: 40px;
+    width: 172px;
+    //height: 40px;
     margin: 50px auto 3px auto;
     border: none;
     cursor: pointer;
@@ -147,7 +164,8 @@ p {
     font-size: 1.5rem;
     line-height: 32px;
     color: #ffffff;
-    font-family: "Arial";
+    font-family: "Citi Sans Book";
+    padding: 9px
   }
 }
 
@@ -190,12 +208,14 @@ p {
   // citizen card paragraph
   .cards .topDivs p {
     @include mixin.ptext;
-    font-size: 1.0625rem;
+    font-size: var.$Paragraph-font;
     a {
       color: #759b24 !important;
       text-decoration: none;
       cursor: pointer;
       transition: color 0.3s ease;
+      font-size: var.$Paragraph-font;
+
     }
     a:hover {
       color: #97b846 !important;
@@ -204,7 +224,7 @@ p {
 
   .cards .bottomDivs p {
     @include mixin.ptext;
-    font-size: 1.0625rem;
+    font-size: var.$Paragraph-font;
   }
 
   @media (max-width: 768px) {
@@ -241,13 +261,14 @@ p {
     min-height: 57px;
     height: auto;
     background-color: #00945f;
-    padding: 10px;
+    padding: 12px 11px;
 
     p {
       @include mixin.ptext;
       color: #ffffff !important;
       text-align: center;
       font-size: 1.5rem !important;
+      line-height: 37px !important;
     }
   }
 
@@ -259,7 +280,7 @@ p {
 
     p {
       @include mixin.ptext;
-      font-size: 1.0625rem;
+      font-size: var.$Paragraph-font;
       text-align: left;
     }
   }
@@ -296,14 +317,16 @@ p {
       position: relative;
 
       .paragraph1 {
-        max-width: 201px;
+        max-width: 195px;
         position: relative;
         display: flex;
         justify-content: flex-start;
         align-items: center;
       }
       .paragraph2 {
-        max-width: 400px;
+        // max-width: 385px;
+        max-width: 401px;
+
         position: relative;
         display: flex;
         justify-content: flex-start;
@@ -312,12 +335,12 @@ p {
 
       p {
         width: auto;
-        font-size: 1.0625rem;
+        font-size: 19px;
         letter-spacing: 0px;
-        line-height: 29px;
+        line-height: 30px;
         color: #666666;
         font-style: italic;
-        font-family: "Arial Italic";
+        font-family: "Citi Sans Book";
         text-align: center;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -326,8 +349,8 @@ p {
 
       .watermark {
         position: absolute;
-        top: -88px;
-        left: -4%;
+        top: -63px;
+        left: -43px;
         pointer-events: none;
         user-select: none;
         white-space: nowrap;
@@ -336,15 +359,17 @@ p {
         letter-spacing: -2px;
         color: #666666;
         font-style: italic;
-        font-family: "Arial Italic";
+        font-family: "Citi Sans Book";
       }
+
+     
 
       .regards {
         opacity: 0.839;
         color: #009e77;
-        font-family: "Arial" !important;
+        font-family: "Citi Sans Book" !important;
         text-align: center;
-        font-size: 1.0625rem; //0.875rem;
+        font-size: var.$Paragraph-font; //0.875rem;
         letter-spacing: 0px;
         line-height: 29px;
         text-align: center;
@@ -414,7 +439,7 @@ p {
     font-size: 0.75rem;
     line-height: 16px;
     color: #000000;
-    font-family: "Arial";
+    font-family: "Citi Sans Book";
   }
 
   // @media (max-width: 768px) {
