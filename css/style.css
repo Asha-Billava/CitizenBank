@@ -25,6 +25,15 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+:root {
+  --paragraph-font: 1.1875rem;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --paragraph-font: 1.125rem;
+  }
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -141,7 +150,7 @@ p {
   color: #888888;
   font-family: "Citi Sans Book";
   height: auto;
-  font-size: 1.125rem;
+  font-size: var(--paragraph-font);
   text-align: left;
 }
 
@@ -202,14 +211,14 @@ p {
   line-height: 31px;
   color: #888888;
   font-family: "Citi Sans Book";
-  font-size: 1.125rem;
+  font-size: var(--paragraph-font);
 }
 .Citizen .cards .topDivs p a {
   color: #759b24 !important;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease;
-  font-size: 1.125rem;
+  font-size: var(--paragraph-font);
 }
 .Citizen .cards .topDivs p a:hover {
   color: #97b846 !important;
@@ -219,7 +228,7 @@ p {
   line-height: 31px;
   color: #888888;
   font-family: "Citi Sans Book";
-  font-size: 1.125rem;
+  font-size: var(--paragraph-font);
 }
 @media (max-width: 768px) {
   .Citizen .cards {
@@ -275,7 +284,7 @@ p {
   line-height: 31px;
   color: #888888;
   font-family: "Citi Sans Book";
-  font-size: 1.125rem;
+  font-size: var(--paragraph-font);
   text-align: left;
 }
 @media (max-width: 768px) {
@@ -319,7 +328,7 @@ p {
 }
 .OfficerCard .Officer .officer-card-body p {
   width: auto;
-  font-size: 19px;
+  font-size: var(--paragraph-font);
   letter-spacing: 0px;
   line-height: 30px;
   color: #666666;
@@ -354,7 +363,7 @@ p {
   color: #009e77;
   font-family: "Citi Sans Book" !important;
   text-align: center;
-  font-size: 1.125rem;
+  font-size: var(--paragraph-font);
   letter-spacing: 0px;
   line-height: 29px;
   text-align: center;
