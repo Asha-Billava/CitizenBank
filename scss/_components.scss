@@ -243,17 +243,21 @@ p {
       grid-template-columns: 1fr; /* small screens */
     }
 
+    .cards div {
+      padding: 3px;
+    }
+
     // verticle line
     .cards div:nth-child(1) {
       border-right: none;
       border-bottom: 0.4px solid #666666;
-      padding-bottom: 32px;
+      padding-bottom: 23px;
     }
     .cards div:nth-child(3),
     .cards div:nth-child(4) {
       border-right: none;
       border-top: 0.4px solid #666666;
-      padding-top: 32px;
+      padding-top: 23px;
     }
 
     .cards div:nth-child(3),
@@ -396,10 +400,19 @@ p {
       }
     }
   }
+  @media (max-width:768px){
+    .Officer {
+      padding: 0 20px 20px 20px;
+  }
+}
+
+  
 }
 @media (max-width: 768px) {
   .OfficerCard {
     flex-direction: column;
+    gap: 0rem;
+    padding: 0px 25px 25px 25px;
 
     // .Officer img {
     //   width: 140px;

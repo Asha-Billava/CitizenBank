@@ -234,16 +234,19 @@ p {
   .Citizen .cards {
     grid-template-columns: 1fr; /* small screens */
   }
+  .Citizen .cards div {
+    padding: 3px;
+  }
   .Citizen .cards div:nth-child(1) {
     border-right: none;
     border-bottom: 0.4px solid #666666;
-    padding-bottom: 32px;
+    padding-bottom: 23px;
   }
   .Citizen .cards div:nth-child(3),
   .Citizen .cards div:nth-child(4) {
     border-right: none;
     border-top: 0.4px solid #666666;
-    padding-top: 32px;
+    padding-top: 23px;
   }
   .Citizen .cards div:nth-child(3),
   .Citizen .cards div:nth-child(4) {
@@ -371,10 +374,17 @@ p {
   margin-top: 1rem;
   max-width: 190px;
 }
+@media (max-width: 768px) {
+  .OfficerCard .Officer {
+    padding: 0 20px 20px 20px;
+  }
+}
 
 @media (max-width: 768px) {
   .OfficerCard {
     flex-direction: column;
+    gap: 0rem;
+    padding: 0px 25px 25px 25px;
   }
   .OfficerCard .officer-card-body .paragraph2 {
     max-width: 228px;
