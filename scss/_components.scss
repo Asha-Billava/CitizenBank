@@ -361,6 +361,12 @@ p {
         font-style: italic;
         font-family: "Citi Sans Book";
       }
+       
+      @media (max-width:400px) {
+        .watermark{
+          left: -93px;
+        }
+      }
 
      
 

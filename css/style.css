@@ -344,6 +344,11 @@ p {
   font-style: italic;
   font-family: "Citi Sans Book";
 }
+@media (max-width: 400px) {
+  .OfficerCard .Officer .officer-card-body .watermark {
+    left: -93px;
+  }
+}
 .OfficerCard .Officer .officer-card-body .regards {
   opacity: 0.839;
   color: #009e77;
